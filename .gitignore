@@ -1,0 +1,8 @@
+#ignore files for github
+*.ppm
+*.txt
+*.exe
+*.o
+*~
+*.json
+*.jpg
