@@ -7,33 +7,76 @@ using namespace std;
 
 void Steganography::readImage(string fileName)
 {
+    //Opening the file for reading
     ifstream jFile;
     jFile.open(fileName);
-    
+
+    //Placing the data into member variables
     if(jFile.is_open())
     {
         jFile >> magicNumber;
-	    jFile >> width;
+        jFile >> width;
         jFile >> height;
         jFile >> maxColor;
+
+        //loop over width and height of the sample data
+        for(int i = 0; i < width; i++)
+        {
+            for(int q = 0; q < height; q++)
+            {
+                int r, g, b;
+                jFile >> r >> g >> b;
+                cout << " " << r << " " << g << " " << b << " ";
+                colorData.push_back(r);
+                colorData.push_back(g);
+                colorData.push_back(b);
+            }
+            cout << endl;
+        }
     }
 }
 
 void Steganography::printImage(string fileName)
 {
-    ifstream jFile;
-    jFile.open(fileName);
-    
-    if(jFile.is_open())
+    ofstream tFile;
+    tFile.open(fileName);
+
+    tFile << magicNumber;
+    tFile << width;
+    tFile << height;
+    tFile << maxColor;
+
+
+    if(tFile.is_open())
     {
         for(int i = 0; i < width; i++)
         {
             for(int q = 0; q < height; q++)
             {
-                
+                int r, g, b;
+                tFile << r << g << b;
+                cout << r << g << b << " ";
             }
         }
     }
+}
+
+void Steganography::readCipherText(string fileName){
+    ifstream jFile;
+    jFile.open(fileName);
+
+    int index;
+    cipherText = "Run through the wall";
+
+    for(int u = 0; u < index; u++){
+        cipherText;
+        index++;
+    }
+}
+
+void Steganography::printCipherText(string fileName){
+    ofstream tFile;
+    tFile.open(fileName);
 }
 
 void Steganography::cleanImage() {
