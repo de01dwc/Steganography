@@ -17,4 +17,4 @@ TODO
 
 ### How the Work was Shared
 
-Some discussions via chat over discord. Matt provided the intital main.cpp file, the completed .h file, the cleanImage(), getNthBit(), encipher(), and decipher() methods, .gitignore file, and the initial README.md file. Waiting for Jalen to contribute to continue the project.
+Some discussions via chat over discord. Matt provided the intital main.cpp file, the completed .h file, the cleanImage(), getNthBit(), encipher(), and decipher() methods, .gitignore file, and the initial README.md file. Jalen provided the readImage(), printImage(), readCipherText(), and printCipherText() methods.
